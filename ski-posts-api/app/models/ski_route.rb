@@ -1,0 +1,2 @@
+class SkiRoute < ApplicationRecord
+end
