@@ -1,17 +1,20 @@
 class PostsController < ApplicationController
     # GET /posts
     def index
-      @posts = Post.all
-      render json: @posts
+      @posts = Post.includes(:ski_route).all
+      puts json: @posts
+      render json: @posts, include: :ski_route
     end
   
     # POST /posts
     def create
-      @post = Post.new(post_params)
-      if @post.save
-        render json: @post, status: :created
+      user = User.find(params[:user_id]) # Find the user by ID
+      post = user.posts.build(post_params)
+    
+      if post.save
+        render json: post, status: :created
       else
-        render json: @post.errors, status: :unprocessable_entity
+        render json: post.errors, status: :unprocessable_entity
       end
     end
   
@@ -39,9 +42,7 @@ class PostsController < ApplicationController
     end
   
     private
-  
+
     def post_params
       params.require(:post).permit(:title, :description, :date, :ski_route_id)
     end
-  end
-  

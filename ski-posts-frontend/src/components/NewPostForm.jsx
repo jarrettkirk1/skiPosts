@@ -16,14 +16,16 @@ const NewPostForm = () => {
           description,
           date,
           ski_route_id: skiRouteId,
+          user_id: currentUserId
         },
       });
       console.log('Post created:', response.data);
-      // Reset the form or redirect after successful submission
+
     } catch (error) {
       console.error('Error creating post:', error);
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit}>
