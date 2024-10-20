@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axiosInstance from '../api/axiosInstance';
+import Profile from './Profile';
 
 const NewPostForm = () => {
   const [title, setTitle] = useState('');
