@@ -4,3 +4,27 @@
   padding: 2rem;
   text-align: center;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/winterpark.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'futura-pt-bold', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fec72b;
+  font-size: 4rem;
+}
+
+.mtnPic {
+  background-image: url(./assets/winterpark.jpeg);
+}

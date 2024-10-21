@@ -1,19 +1,13 @@
 import React from 'react';
 import PostsList from './components/PostsList';
 import NewPostForm from './components/NewPostForm';
-import LoginButton from './components/LoginButton';
-import LogoutButton from './components/LogoutButton';
-import Profile from './components/Profile';
+import pic from './assets/winterpark.jpeg'
+import './App.css'
 
 const App = () => {
   return (
     <div>
-      <h1>Ski Blog</h1>
-
-      <Profile />
-      <LoginButton />
-      <LogoutButton />
-
+      <h1>Welcome to Winter Park Ski Posts</h1>
       <NewPostForm />
       <PostsList />
     </div>
